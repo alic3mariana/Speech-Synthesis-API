@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Gourmet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #dedede84;
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background-color: #ff6600; 
+      padding: 20px; 
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.419); 
+    }
+    footer {
+      background-color: #ff6600; 
+      color: white;
+      text-align: center;
+      padding: 15px 0; 
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.346); 
+    }
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 30px; 
+      padding: 30px; 
+    }
+    .prato {
+      background-color: white;
+      padding: 20px; 
+      border-radius: 12px; 
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.507); 
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    }
+    .prato:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.479); 
+      border: 2px solid #d31900; 
+    }
+    .prato a {
+      display: inline-block;
+      margin-top: 12px; 
+      padding: 12px 24px; 
+      text-decoration: none;
+      color: white;
+      background-color: #d31900; 
+      border-radius: 8px; 
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+    .prato a:hover {
+      background-color: #ff6600; 
+      transform: translateY(-2px); 
+    }
+    .prato img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px; 
+      transition: transform 0.3s;
+    }
+    .prato img:hover {
+      transform: scale(1.05); 
+    }
+    .prato button {
+      margin-top: 12px; 
+      padding: 12px 24px; 
+      border: none;
+      background-color: #d31900; 
+      color: white;
+      border-radius: 8px; 
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s; 
+    }
+    .prato button:hover {
+      background-color: #ff6600; 
+      transform: translateY(-2px); 
+    }
+    .prato h3 {
+      margin-bottom: 12px; 
+      font-size: 1.2em; 
+      color: #d31900; 
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr 1fr; 
+      }
+    }
+    @media (max-width: 480px) {
+      .main-content {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Cardápio Gourmet</h1> 
+  <p>Experimente os nossos pratos exclusivos!</p> 
+</header>
+
+<main class="main-content">
+  <!-- Prato 1 -->
+  <div class="prato">
+    <h3>Lasagna Bolonhesa</h3> 
+    <img src="https://anamariareceitas.com.br/wp-content/uploads/2022/10/Lasanha-a-bolonhesa.jpg" alt="Lasagna tradicional com camadas de massa intercaladas com molho bolonhesa rico e queijo derretido."> 
+    <a href="https://anamariareceitas.com.br/wp-content/uploads/2022/10/Lasanha-a-bolonhesa.jpg" aria-label="Link para a primeira imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 2 -->
+  <div class="prato">
+    <h3>Coq au Vin</h3> 
+    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2012/01/coq-au-vin-3740fe3.jpg?resize=768,574" alt="Frango cozido em vinho tinto com cogumelos, bacon e cebolas, servido com um molho rico e saboroso."> 
+    <a href="https://images.immediate.co.uk/production/volatile/sites/30/2012/01/coq-au-vin-3740fe3.jpg?resize=768,574" aria-label="Link para a segunda imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 3 -->
+  <div class="prato">
+    <h3>Tempura de Legumes</h3> 
+    <img src="https://i.ytimg.com/vi/ZoSwZsUgNQM/maxresdefault.jpg" alt="Legumes frescos empanados e fritos, crocantes por fora e macios por dentro, acompanhados de molho à base de soja."> 
+    <a href="https://i.ytimg.com/vi/ZoSwZsUgNQM/maxresdefault.jpg" aria-label="Link para a terceira imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 4 -->
+  <div class="prato">
+    <h3>Ravioli de Cogumelos Selvagens</h3> 
+    <img src="https://blog.fungodequintal.com.br/wp-content/uploads/2023/12/20231217_Receita-ravioli-de-cogumelo-ao-molho-de-manteiga-e-alho.png" alt="Ravioli recheado com uma mistura de cogumelos selvagens, servido com molho de manteiga e sálvia."> 
+    <a href="https://blog.fungodequintal.com.br/wp-content/uploads/2023/12/20231217_Receita-ravioli-de-cogumelo-ao-molho-de-manteiga-e-alho.png" aria-label="Link para a quarta imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 5 -->
+  <div class="prato">
+    <h3>Panna Cotta com Frutas Vermelhas</h3> 
+    <img src="https://surradelupulo.com.br/wp-content/uploads/2023/04/dicas-para-fazer-uma-panna-cotta-perfeita.webp" alt="Panna cotta cremosa servida com uma compota de frutas vermelhas frescas e um toque de baunilha."> 
+    <a href="https://surradelupulo.com.br/wp-content/uploads/2023/04/dicas-para-fazer-uma-panna-cotta-perfeita.webp" aria-label="Link para a quinta imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 6 -->
+  <div class="prato">
+    <h3>Goulash Húngaro</h3> 
+    <img src="https://minervafoods.com/wp-content/uploads/2022/12/goulash_img_0045_foto.jpg" alt="Goulash tradicional com carne de vaca, batatas e especiarias, cozido lentamente até ficar macio e saboroso."> 
+    <a href="https://minervafoods.com/wp-content/uploads/2022/12/goulash_img_0045_foto.jpg" aria-label="Link para a sexta imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 7 -->
+  <div class="prato">
+    <h3>Pavlova de Maracujá</h3> 
+    <img src="https://www.violifeprofessional.com/pt-pt/-/media/Project/Upfield/Brands/Upfield-Professional/Upfield-Professional-PT/Recipes/Sync-Img/6d418254-c35e-4ac7-af7f-084c43b2dc91.jpg?rev=e76b0f9c1e404f2788222938391900ea&w=1600" alt="Pavlova com merengue crocante, coberta com chantilly e calda de maracujá."> 
+    <a href="https://www.violifeprofessional.com/pt-pt/-/media/Project/Upfield/Brands/Upfield-Professional/Upfield-Professional-PT/Recipes/Sync-Img/6d418254-c35e-4ac7-af7f-084c43b2dc91.jpg?rev=e76b0f9c1e404f2788222938391900ea&w=1600" aria-label="Link para a sétima imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 8 -->
+  <div class="prato">
+    <h3>Cheesecake de Framboesa</h3> 
+    <img src="https://www.receitasagora.com.br/wp-content/uploads/2020/08/receita-de-cheesecake-de-framboesa.jpg" alt="Cheesecake suave com base crocante e cobertura de framboesas frescas e calda de frutas vermelhas."> 
+    <a href="https://www.receitasagora.com.br/wp-content/uploads/2020/08/receita-de-cheesecake-de-framboesa.jpg" aria-label="Link para a oitava imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 9 -->
+  <div class="prato">
+    <h3>Feijoada Brasileira</h3> 
+    <img src="https://www.acasaencantada.com.br/wp-content/uploads/2019/12/receita-de-feijoada-simples.png" alt="Feijoada rica e saborosa com feijão preto, carne de porco e acompanhamentos tradicionais como arroz e couve."> 
+    <a href="https://www.acasaencantada.com.br/wp-content/uploads/2019/12/receita-de-feijoada-simples.png" aria-label="Link para a nona imagem">Vizualizar melhor</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Cardápio Gourmet. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function lerDescricao(botao) {
+      // Interrompe qualquer fala em andamento antes de iniciar uma nova
+      window.speechSynthesis.cancel();
+    
+      // Captura o texto do atributo alt da imagem dentro do mesmo div do botão clicado
+      const descricaoImagem = botao.parentElement.querySelector('img').alt;
+    
+      // Função para ativar a leitura em voz alta
+      const utterance = new SpeechSynthesisUtterance(descricaoImagem);
+      utterance.lang = 'pt-BR'; // Define o idioma como português do Brasil
+      window.speechSynthesis.speak(utterance);
+    }
+    </script>
+
+</body>
+</html>
